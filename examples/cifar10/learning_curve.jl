@@ -1,7 +1,7 @@
 #!/usr/local/bin/julia
 
 using PyPlot, JLD
-# Plot the learning curve for the MNIST tutorial to verify
+# Plot the learning curve for to verify
 # the solver is progressing toward convergence
 
 stats = load("snapshots/statistics.jld")
@@ -20,7 +20,7 @@ y = convert(Array{Float64}, y)
 raw = plot(x, y, linewidth=1, label="Raw")
 xlabel("Iterations")
 ylabel("Objective Value")
-title("MNIST Learning Curve")
+title("CIFAR10 Learning Curve")
 grid("on")
 
 function low_pass{T <: Real}(x::Vector{T}, window::Int)
